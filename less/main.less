@@ -1,0 +1,190 @@
+// Variables 
+@bg-color-login: #E3F0DF;
+@bg-color-loading: #9CE4D7;
+@bg-color-anniversary: #FAC45E;
+@bg-image-login: url('../img/bg.jpg');
+@button-border-color: #ff4314;
+@font-color: #ff4314;
+// Rules
+.login {
+    position: fixed;
+    z-index: 10;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @bg-color-login;
+    background-image: @bg-image-login;
+    background-repeat: no-repeat;
+    background-position: right;
+    background: #e3f0df;
+    /* Old browsers */
+    background-image: @bg-image-login, -moz-linear-gradient(top, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
+    /* FF3.6+ */
+    background-image: @bg-image-login, -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3f0df), color-stop(40%, #e3f0df), color-stop(100%, #daecd5));
+    /* Chrome,Safari4+ */
+    background-image: @bg-image-login, -webkit-linear-gradient(top, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
+    /* Chrome10+,Safari5.1+ */
+    background-image: @bg-image-login, -o-linear-gradient(top, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
+    /* Opera 11.10+ */
+    background-image: @bg-image-login, -ms-linear-gradient(top, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
+    /* IE10+ */
+    background-image: @bg-image-login, linear-gradient(to bottom, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
+    background-repeat: no-repeat;
+    background-position: right;
+    /* W3C */
+    .login-form {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        padding-top: 45px;
+        .input {
+            display: block;
+            width: 260px;
+        }
+        .submit {
+            display: block;
+            border-color: @button-border-color;
+            transition: all .3s ease;
+            color: @font-color;
+            &:hover {
+                border-color: darken(@button-border-color, 10%);
+                color: darken(@font-color, 10%);
+            }
+        }
+        .error {
+            display: none;
+            position: absolute;
+            background-color: #F74A38;
+            border-radius: 4px;
+            padding: 5px 20px;
+            color: white;
+            top: 0;
+            width: 337px;
+            font-size: 14px;
+        }
+    }
+}
+
+.loading {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @bg-color-loading;
+    background-image: url("../img/heart.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    -webkit-animation: heart 1.3s infinite;
+    /* Safari 4+ */
+    -moz-animation: heart 1.3s infinite;
+    /* Fx 5+ */
+    -o-animation: heart 1.3s infinite;
+    /* Opera 12+ */
+    animation: heart 1.3s infinite;
+}
+
+.content {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    #video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+    }
+}
+
+.anniversary {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @bg-color-anniversary;
+    .container {
+        display: table;
+        height: 100%;
+        padding: 40px;
+        .row {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            height: 100%;
+
+            border: 14px solid #ff4314;
+            border-radius: 34px;
+            span {
+                font-family: 'Indie Flower', cursive;
+                text-transform: uppercase;
+                font-weight: 900;
+                color: black;
+                font-size: 90px;    
+            }
+        }
+    }
+}
+
+@keyframes heart {
+    0% {
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari */
+        transform: scale(1);
+    }
+    50% {
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari */
+        transform: scale(1.2);
+    }
+    100% {
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari */
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes heart {
+    0% {
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari */
+        transform: scale(1);
+    }
+    50% {
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari */
+        transform: scale(1.2);
+    }
+    100% {
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari */
+        transform: scale(1);
+    }
+}
