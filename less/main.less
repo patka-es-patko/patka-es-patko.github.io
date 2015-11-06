@@ -1,8 +1,9 @@
 // Variables 
 @bg-color-login: #E3F0DF;
 @bg-color-loading: #9CE4D7;
-@bg-color-anniversary: #FAC45E;
+@bg-color-anniversary: #F5D6D1;
 @bg-image-login: url('../img/bg.jpg');
+@bg-image-annyversary: url('../img/love.jpg');
 @button-border-color: #ff4314;
 @font-color: #ff4314;
 // Rules
@@ -33,10 +34,12 @@
     background-image: @bg-image-login, linear-gradient(to bottom, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
     background-repeat: no-repeat;
     background-position: right;
-    /* W3C */
+    transform: translateX(0px);
+    transform: translateX(0px);
+    transition: transform .7s ease;
     .login-form {
         position: absolute;
-        top: 20%;
+        top: 100px;
         left: 20%;
         padding-top: 45px;
         .input {
@@ -49,8 +52,8 @@
             transition: all .3s ease;
             color: @font-color;
             &:hover {
-                border-color: darken(@button-border-color, 10%);
-                color: darken(@font-color, 10%);
+                border-color: lighten(@button-border-color, 20%);
+                // color: darken(@font-color, 10%);
             }
         }
         .error {
@@ -118,8 +121,11 @@
     width: 100%;
     height: 100%;
     background-color: @bg-color-anniversary;
+    background-image: @bg-image-annyversary;
+    background-repeat: no-repeat;
+    background-position: -100px;
     .container {
-        display: table;
+        display: none;
         height: 100%;
         padding: 40px;
         .row {

@@ -16,12 +16,20 @@ $(document).ready(function() {
     var error = $($('.error')[0]);
     var video = document.getElementById('video');
 
-    var stopStart = $($('.stopstart')[0]);
+    login.hide();
+    content.hide();
+    anniversary.hide();
+
+    setTimeout(function() {
+        loading.fadeOut();
+        login.fadeIn();
+    }, 2300);
 
     submit.click(function() {
         if (username.val() === USER && password.val() === PASS) {
             error.hide();
-            login.fadeOut();
+            login.css('-webkit-transform', 'translateY(-1000px)');
+            // login.fadeOut();
             loading.fadeIn();
             setTimeout(function() {
                 loading.fadeOut();

@@ -23,11 +23,12 @@
   background-image: url('../img/bg.jpg'), linear-gradient(to bottom, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
   background-repeat: no-repeat;
   background-position: right;
-  /* W3C */
+  transform: translateX(0px);
+  transition: transform .7s ease;
 }
 .login .login-form {
   position: absolute;
-  top: 20%;
+  top: 100px;
   left: 20%;
   padding-top: 45px;
 }
@@ -42,8 +43,7 @@
   color: #ff4314;
 }
 .login .login-form .submit:hover {
-  border-color: #e02d00;
-  color: #e02d00;
+  border-color: #ff957a;
 }
 .login .login-form .error {
   display: none;
@@ -104,10 +104,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fac45e;
+  background-color: #f5d6d1;
+  background-image: url('../img/love.jpg');
+  background-repeat: no-repeat;
+  background-position: -100px;
 }
 .anniversary .container {
-  display: table;
+  display: none;
   height: 100%;
   padding: 40px;
 }
