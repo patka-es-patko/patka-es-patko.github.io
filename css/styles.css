@@ -8,6 +8,7 @@
   height: 100%;
   background-color: #e3f0df;
   background-image: url('../img/bg.jpg');
+  background-position: right;
   background: #e3f0df;
   /* Old browsers */
   background-image: url('../img/bg.jpg'), -moz-linear-gradient(top, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
@@ -22,8 +23,9 @@
   /* IE10+ */
   background-image: url('../img/bg.jpg'), linear-gradient(to bottom, #e3f0df 0%, #e3f0df 40%, #daecd5 100%);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
   transform: translateX(0px);
+  transform: translateX(0%);
   transition: transform .7s ease;
 }
 .login .login-form {

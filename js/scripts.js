@@ -40,7 +40,7 @@ $(document).ready(function() {
     submit.click(function() {
         if (username.val() === USER && password.val() === PASS) {
             error.hide();
-            login.css('-webkit-transform', 'translateY(-1000px)');
+            login.css('-webkit-transform', 'translateY(-100%)');
             // login.fadeOut();
             loading.fadeIn();
             setTimeout(function() {
