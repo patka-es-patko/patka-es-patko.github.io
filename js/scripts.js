@@ -16,13 +16,25 @@ $(document).ready(function() {
     var error = $($('.error')[0]);
     var video = document.getElementById('video');
 
+    var loginActive = false;
+
     login.hide();
     content.hide();
     anniversary.hide();
 
+    username.focus();
+
+    password.keypress(function(e) {
+        var key = e.which;
+        if (key == 13) {
+            submit.click();
+            return false;
+        }
+    });
+
     setTimeout(function() {
-        loading.fadeOut();
         login.fadeIn();
+        loginActive = true;
     }, 2300);
 
     submit.click(function() {
