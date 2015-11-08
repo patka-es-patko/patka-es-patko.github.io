@@ -125,6 +125,7 @@
     background-repeat: no-repeat;
     background-position: -100px;
     .container {
+        display: table;
         display: none;
         height: 100%;
         padding: 40px;
@@ -133,15 +134,27 @@
             vertical-align: middle;
             text-align: center;
             height: 100%;
-
-            border: 14px solid #ff4314;
-            border-radius: 34px;
+            position: relative;
             span {
-                font-family: 'Indie Flower', cursive;
+                font-family: 'Lato', sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
                 color: black;
-                font-size: 90px;    
+                font-size: 500px;
+            }
+            .dot-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 200px;
+                .dot {
+                    background-color: black;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    float: right;
+                    margin: 0 10px;
+                }
             }
         }
     }

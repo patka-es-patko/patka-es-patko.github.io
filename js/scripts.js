@@ -41,7 +41,9 @@ $(document).ready(function() {
         if (username.val() === USER && password.val() === PASS) {
             error.hide();
             login.css('-webkit-transform', 'translateY(-100%)');
-            // login.fadeOut();
+            setTimeout(function() {
+                login.fadeOut();
+            }, 500);
             loading.fadeIn();
             setTimeout(function() {
                 loading.fadeOut();
