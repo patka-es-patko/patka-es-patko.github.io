@@ -111,6 +111,13 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.anniversary .text-cover {
+  background-color: #f5d6d1;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+}
 .anniversary .container {
   display: table;
   display: none;
