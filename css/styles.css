@@ -109,7 +109,7 @@
   background-color: #f5d6d1;
   background-image: url('../img/love.jpg');
   background-repeat: no-repeat;
-  background-position: -100px;
+  background-position: center;
 }
 .anniversary .container {
   display: table;

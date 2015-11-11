@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // TOP SECRET CREDENTIALS 
-    var USER = '';
-    var PASS = '';
+    var USER = 'patka';
+    var PASS = 'patkavagyok';
 
     // ELEMENTS
     var login = $($('.login')[0]);
